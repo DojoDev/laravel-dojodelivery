@@ -19,7 +19,7 @@ class UserTableSeeder extends Seeder
 
             [
                 'name' => 'user',
-                'email' => 'user@user.com',
+                'email' => 'user@user.com.br',
                 'password' => bcrypt('12wqasxz!QAZ'),
                 'remember_token' => str_random(10),
             ]
@@ -29,7 +29,7 @@ class UserTableSeeder extends Seeder
 
             [
                 'name' => 'admin',
-                'email' => 'admin@user.com',
+                'email' => 'admin@user.com.br',
                 'password' => bcrypt('12wqasxz!QAZ'),
                 'role' =>'admin',
                 'remember_token' => str_random(10),
