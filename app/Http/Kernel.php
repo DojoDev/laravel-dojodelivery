@@ -27,7 +27,8 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'auth' => \DojoDelivery\Http\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'auth.basic' =>\DojoDelivery\Http\AuthenticateWithBasicAuth::class,
         'guest' => \DojoDelivery\Http\Middleware\RedirectIfAuthenticated::class,
+        'auth.checkrole'=>\DojoDelivery\Http\Middleware\CheckRole::class,
     ];
 }

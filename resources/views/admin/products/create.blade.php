@@ -11,13 +11,13 @@
             @include('errors._check')
 
             <span class="row">
-                {!! Form::open(['route'=>'admin.products.store'], ['class:'=>'form']) !!}
+                {!! Form::open(['class:'=>'form-horizontal'],['route'=>'admin.products.store']) !!}
 
                @include('admin.products._form')
 
-                   <div class="form-group-lg">
+                   <div class="form-group">
 
-                       {!! Form::submit('Store Product', ['class:'=>'btn btn-success']) !!}
+                       {!! Form::submit('Store Product', ['class'=>'btn btn-success']) !!}
                    </div>
 
                 {!! Form::close() !!}

@@ -8,9 +8,6 @@
 | Here is where you can register all of the routes for an application.
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
-$repository = app()->make('DojoDelivery\Repositories\ProductRepository');
-
-    return $repository->all();
 |
 */
 
@@ -18,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'admin', 'as'=>'admin.'], function(){
+Route::group(['prefix'=>'admin','middleware'=>'auth.checkrole:admin', 'as'=>'admin.'], function(){
 
     Route::get('categories', ['as'=>'categories.index', 'uses'=>'CategoriesController2@index']);
 
@@ -29,6 +26,21 @@ Route::group(['prefix'=>'admin', 'as'=>'admin.'], function(){
     Route::post('categories/update/{id}',  ['as'=>'categories.update', 'uses'=>'CategoriesController2@update']);
 
     Route::post('categories/store',  ['as'=>'categories.store', 'uses'=>'CategoriesController2@store']);
+    
+    Route::get('categories/destroy/{id}',  ['as'=>'categories.destroy', 'uses'=>'CategoriesController2@destroy']);
+
+
+    Route::get('clients', ['as'=>'clients.index', 'uses'=>'ClientsController@index']);
+
+    Route::get('clients/edit/{id}',  ['as'=>'clients.edit', 'uses'=>'ClientsController@edit']);
+
+    Route::get('clients/create',  ['as'=>'clients.create', 'uses'=>'ClientsController@create']);
+
+    Route::post('clients/update/{id}',  ['as'=>'clients.update', 'uses'=>'ClientsController@update']);
+
+    Route::post('clients/store',  ['as'=>'clients.store', 'uses'=>'ClientsController@store']);
+
+    Route::get('clients/destroy/{id}',  ['as'=>'clients.destroy', 'uses'=>'ClientsController@destroy']);
 
 
     Route::get('products', ['as'=>'products.index', 'uses'=>'ProductsController@index']);

@@ -10,18 +10,20 @@
 
         @include('errors._check')
 
-        {!! Form::model($product , ['route'=>['admin.products.update', $product->id]]) !!}
+        {!! Form::model($product , ['class'=>'form-horizontal'],['route'=>['admin.products.update', $product->id]]) !!}
+
         @include('admin.products._form')
 
         <div class="form-group">
-        {!! Form::submit('.:: Save ::.', ['class:'=>'btn btn-success']) !!}
+        {!! Form::submit('.:: Save ::.', ['class'=>'btn btn-success']) !!}
         </div>
+
         {!! Form::close() !!}
+<div class="container">
+    <a href="{{route('admin.products.index')}}" class="btn btn-default"><< Back</a>
+</div>
 
-        <a href="{{route('admin.products.index')}}" class="btn btn-default"><< Back</a>
-
-
-
+<hr>
 
 </div><!-- End Container -->
 @endsection

@@ -33,9 +33,10 @@
 
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/') }}">Home</a></li>
+					<li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="{{ route('admin.categories.index') }}">Category</a></li>
                     <li><a href="{{ route('admin.products.index') }}">Product</a></li>
+                    <li><a href="{{ route('admin.clients.index') }}">Client</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -60,9 +61,14 @@
 	</nav>
 
 	@yield('content')
-
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted"><strong>Dojo Delivery.</strong></p>
+        </div>
+    </footer>
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </body>
 </html>

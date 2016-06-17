@@ -9,19 +9,20 @@
             <hr>
 @include('errors._check')
 
-                {!! Form::model($category , ['route'=>['admin.categories.update', $category->id]]) !!}
+                {!! Form::model($category , ['class:'=>'form-horizontal'],['route'=>['admin.categories.update', $category->id]]) !!}
 
                @include('admin.categories._form')
 
 
             <div class="form-group">
-                {!! Form::submit('.::Category Save::.', ['class:'=>'btn btn-primary']) !!}
+                {!! Form::submit('.::Category Save::.', ['class'=>'btn btn-primary']) !!}
             </div>
             {!! Form::close() !!}
         </header>
 
 
     </div><!-- End Row -->
+    <hr>
     <a href="{{route('admin.categories.index')}}" class="btn btn-default"><< Back</a>
 </div><!-- End Container -->
 @endsection

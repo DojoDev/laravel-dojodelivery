@@ -63,6 +63,12 @@ class CategoriesController2 extends Controller
         $this->repository->update($data, $id);
         return redirect()->route('admin.categories.index');
     }
+    public function destroy()
+    {
+        $this->repository->delete($id);
+        return redirect()->route('admin.categories.index');
+    }
+   
 
 
 }

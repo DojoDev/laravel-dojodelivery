@@ -30,8 +30,9 @@
                     <td>{{$category->name}}</td>
                     <td>
                        <a href="{{route('admin.categories.edit', ['id'=>$category->id])}}" class="btn btn-primary" role="button">
-                           <icon class="glyphicon glyphicon-pencil"> Edit</icon>
+                           <icon class="glyphicon glyphicon-pencil"></icon>
                        </a>
+                       
 
 
                     </td>
