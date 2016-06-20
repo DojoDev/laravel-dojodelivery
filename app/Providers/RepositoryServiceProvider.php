@@ -24,6 +24,10 @@ class RepositoryServiceProvider extends ServiceProvider
             'DojoDelivery\Repositories\ProductRepositoryEloquent'
         );
 
+        $this->app->bind('DojoDelivery\Repositories\ItemOrderRepository',
+            'DojoDelivery\Repositories\ItemOrderRepositoryEloquent'
+        );
+
 
 
     }

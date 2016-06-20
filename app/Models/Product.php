@@ -15,12 +15,18 @@ class Product extends Model implements Transformable
         'name',
         'description',
         'price'
-
-
     ];
+
     public function category()
     {
         return $this->belongsTo(Category::class);
     }
+
+     public function items()
+    {
+        return $this->belongsTo(OrderItem::class);
+    }
+
+
 
 }

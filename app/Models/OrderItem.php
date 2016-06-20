@@ -18,7 +18,8 @@ class OrderItem extends Model implements Transformable
 
 
     ];
-    public function order()
+    
+    public function orders()
     {
         return $this->belongsTo(Order::class);
     }
@@ -27,6 +28,5 @@ class OrderItem extends Model implements Transformable
     {
         return $this->hasMany(Product::class);
     }
-
 
 }

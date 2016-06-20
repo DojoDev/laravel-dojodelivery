@@ -48,3 +48,35 @@ $factory->define(DojoDelivery\Models\Product::class, function(Faker\Generator $f
     ];
 
 });
+
+$factory->define(DojoDelivery\Models\Order::class, function(Faker\Generator $faker){
+    return[
+        'client_id'=> rand(1,10),
+        'total'=> rand(50,100),
+        'status'=> 0
+    ];
+
+});
+
+$factory->define(DojoDelivery\Models\OrderItem::class, function(Faker\Generator $faker){
+    return[
+
+    ];
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,33 +6,26 @@ use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
-class Order extends Model implements Transformable
+class ItemOrder extends Model implements Transformable
 {
     use TransformableTrait;
 
     protected $fillable =[
-        'client_id',
-        'user_deliveryman_id',
-        'total',
-        'status'
+        'product_id',
+        'order_id',
+        'price',
+        'qtd'
 
 
     ];
-
-    public function items()
+    public function orders()
     {
-        return $this->hasMany(OrderItem::class);
-    }
-
-    public function deliveryman()
-    {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(Order::class);
     }
 
     public function products()
     {
         return $this->hasMany(Product::class);
     }
-
 
 }

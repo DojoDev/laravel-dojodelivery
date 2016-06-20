@@ -15,6 +15,7 @@ class ClientsController extends Controller
 {
 
     private $repository;
+    private $clientServices;
 
     public function __construct(ClientRepository $repository, ClientServices $clientServices)
     {

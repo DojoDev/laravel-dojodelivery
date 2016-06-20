@@ -17,5 +17,8 @@ class CategoryTableSeeder extends Seeder
                 $c->products()->save(factory(DojoDelivery\Models\Product::class)->make());
             }
         });
+
     }
+
+
 }

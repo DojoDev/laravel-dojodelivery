@@ -55,5 +55,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth.checkrole:admin', 'as'=>'adm
 
     Route::get('products/destroy/{id}',  ['as'=>'products.destroy', 'uses'=>'ProductsController@destroy']);
 
+
+    Route::get('orders', ['as'=>'orders.index', 'uses'=>'OrdersController@index']);
+
+
 });
 
