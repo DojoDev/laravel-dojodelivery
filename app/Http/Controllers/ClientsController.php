@@ -28,7 +28,7 @@ class ClientsController extends Controller
     {
 
         $clients = $this->repository->paginate(05);
-      return view('admin.clients.index',compact('clients'));
+        return view('admin.clients.index',compact('clients'));
     }
      public function create()
      {

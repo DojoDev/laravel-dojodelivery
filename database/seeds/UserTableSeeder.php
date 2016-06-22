@@ -36,6 +36,15 @@ class UserTableSeeder extends Seeder
             ]
         );
 
+           factory(DojoDelivery\Models\User::class, 3)->create(
+
+            [
+        
+                'role' =>'deliveryman',
+            
+            ]
+        );
+
 
         factory(DojoDelivery\Models\User::class, 10)->create()->each(function($u){
             $u->client()->save(factory(DojoDelivery\Models\Client::class)->make());

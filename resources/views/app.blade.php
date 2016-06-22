@@ -37,6 +37,7 @@
                     <li><a href="{{ route('admin.categories.index') }}">Category</a></li>
                     <li><a href="{{ route('admin.products.index') }}">Product</a></li>
                     <li><a href="{{ route('admin.clients.index') }}">Client</a></li>
+                    <li><a href="{{ route('admin.orders.index') }}">Order</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

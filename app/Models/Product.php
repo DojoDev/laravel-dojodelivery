@@ -22,10 +22,6 @@ class Product extends Model implements Transformable
         return $this->belongsTo(Category::class);
     }
 
-     public function items()
-    {
-        return $this->belongsTo(OrderItem::class);
-    }
 
 
 

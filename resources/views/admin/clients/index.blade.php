@@ -15,7 +15,6 @@
             <table class="table table-responsive table-bordered">
                 <thead>
                 <tr>
-
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
@@ -26,8 +25,6 @@
                     <th>Zipcode</th>
                     <th>Action</th>
                 </tr>
-
-
                 </thead>
                 <tbody>
 
@@ -46,9 +43,7 @@
                        <a href="{{route('admin.clients.edit', ['id'=>$client->id])}}" class="btn btn-primary" role="button">
                            <icon class="glyphicon glyphicon-pencil"></icon>
                        </a>
-                        <a href="{{route('admin.clients.destroy', ['id'=>$client->id])}}" class="btn btn-danger" role="button">
-                            <icon class="glyphicon glyphicon-pencil"></icon>
-                        </a>
+                      
 
 
                     </td>
