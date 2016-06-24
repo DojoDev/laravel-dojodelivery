@@ -5,6 +5,7 @@ namespace DojoDelivery\Http\Controllers;
 use DojoDelivery\Repositories\ClientRepository;
 
 use DojoDelivery\Services\ClientServices;
+
 use Illuminate\Http\Request;
 
 use DojoDelivery\Http\Requests;
